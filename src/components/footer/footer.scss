@@ -1,0 +1,87 @@
+.footer {
+    width: var(--area-width);
+}
+  
+.footerContainer {
+    width: var(--container-width);
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    margin-bottom: 80px;
+}
+  
+.footerBlock {
+    width: calc(100%/6);
+    padding-left: 30px;
+}
+
+.footerLogo {
+    width: 52px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+.footerIcon {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.footerIcon .snsIcon {
+    color: #e5e5e5;
+    font-size: 22px;
+}
+
+.footerIcon .snsIcon:hover {
+    color: pink;
+}
+
+
+.footerLogo img {
+    width: 100%;
+}
+  
+
+.footerBlock h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+
+.footerBlock ul {
+    padding: 0;
+    list-style: none;
+}
+  
+.footerBlock li {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+.footerBlock li:hover {
+    color: #2781e1;
+}
+  
+/* 반응형 스타일링: 작은 화면에서 각 블록이 세로로 배치되도록 설정 */
+@media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footerBlock {
+      width: 100%;
+    }
+}
+
+.copyright {
+    background-color: pink;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 0;
+}
+  

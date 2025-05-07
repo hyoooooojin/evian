@@ -1,0 +1,45 @@
+.instagram {
+    width: 100%;
+    margin-bottom: var(--area-gap);
+  }
+  .instagramContainer {
+    width: 100%;
+  }
+  .instagramTitle {
+    font-size: var(--area-title);
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .instagramSlider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .instagramSlideContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+    transition: transform 0s;
+    width: auto;
+  }
+  .image-box {
+    width: 360px;
+    height: 280px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px #0000001a;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(-4440px);
+    }
+  }
+  

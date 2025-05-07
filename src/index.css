@@ -1,0 +1,8 @@
+* { margin: 0 ; padding: 0; }
+
+:root {
+  --area-width: 100vw;
+  --container-width: 75%;
+  --area-gap: 120px; 
+  --area-title: 32px;
+}

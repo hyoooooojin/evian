@@ -1,0 +1,52 @@
+.hero {
+    width: var(--area-width);
+    height: 100vh;
+    margin-bottom: var(--area-gap);
+    background-image:url(../../assets/images/background.jpg);
+    background-size: cover;
+}
+
+.heroContainer {
+    width: var(--container-width);
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.heroContent {
+    color: #fff;
+    position: absolute;
+    top: 30%;
+}
+
+.heroTitle {
+    font-size: 52px;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
+
+.heroDesc {
+    width: 40%;
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+
+.shopButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 16px;
+    border: 1px solid white;
+}
+
+.shopButton:hover {
+    background-color: #fff;
+    color: #767676;
+    text-shadow: 2px 2px 5px #0003;
+}
+
+.arrowIcon {
+    font-size: 16px;
+}

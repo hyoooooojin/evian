@@ -1,0 +1,51 @@
+.substanceActions {
+    width: var(--area-width);
+    margin-bottom: var(--area-gap);
+}
+
+.substanceActionsContainer {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.substanceActionsTitle {
+    margin-bottom: 16px;
+    font-size: var(--area-title);
+    text-align: center;
+}
+
+.substanceActionsDesc {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.actions {
+    display: flex;
+    gap: 2%;
+}
+
+.actionCard {
+    width: 32%;
+}
+
+.actionCard img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.actionCardTitle {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.actionCardDesc {
+    font-size: 14px;
+    text-align: center;
+}

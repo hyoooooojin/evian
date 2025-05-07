@@ -1,0 +1,185 @@
+.nav {
+  width: var(--area-width);
+  height: 80px;
+  position: fixed;
+  z-index: 10; /* z-index 값 증가 */
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.15) 50%);
+  
+  &.scrolled {
+    background: #0003;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: #e5e5e5;
+  }
+  
+  &.open {
+    background: transparent;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  .navContainer {
+    width: var(--container-width);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; // 세로 중앙 정렬
+    justify-content: space-between;
+    color: #fff;
+    
+    @media screen and (max-width: 1280px) {
+      width: 90%;
+    }
+    
+    .left {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      
+      .leftGnb {
+        border: 1.4px solid #fff;
+        border-radius: 24px;
+        padding: 6px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: #fff;
+          color: #767676;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      
+      .leftHamberger {
+        width: 36px;
+        max-width: 36px;
+        height: 36px;
+        position: relative;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 20; /* 햄버거 메뉴의 z-index 증가 */
+        
+        @media screen and (max-width: 1280px) {
+          display: flex;
+        }
+        
+        .closed {
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          background-color: #fff;
+          transition: all 0.3s ease-in-out; /* 애니메이션 속도 약간 늘림 */
+          
+          &:nth-child(1) {
+            transform: translateY(-12px);
+          }
+          
+          &:nth-child(3) {
+            transform: translateY(12px);
+          }
+        }
+        
+        &.open {
+          .closed:nth-child(1) {
+            transform: rotate(45deg);
+            background-color: #fff; /* 색상 강조 */
+          }
+          .closed:nth-child(2) {
+            opacity: 0;
+          }
+          .closed:nth-child(3) {
+            transform: rotate(-45deg);
+            background-color: #fff; /* 색상 강조 */
+          }
+        }
+      }
+    }
+    
+    .center {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      
+      img {
+        width: 60px;
+      }
+    }
+    
+    .right {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      gap: 12px;
+      
+      .navIcon {
+        cursor: pointer;
+        font-size: 22px;
+      }
+      
+      .notiIcon {
+        position: relative;
+        
+        &::after {
+          background-color: red;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          right: 2px;
+          top: 2px;
+        }
+      }
+    }
+  }
+}
+
+.hambergerBlock {
+  display: none;
+  
+  &.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100vh;
+    background-color: rgba(225, 225, 225, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 5; /* nav보다 낮고 다른 콘텐츠보다 높게 설정 */
+  }
+  
+  .hambergerMenu {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    > p {
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+      
+      &:hover {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
