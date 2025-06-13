@@ -32,40 +32,54 @@ const Nav = () => {
   return (
     <>
       <div className={`nav ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'open' : ''}`}>
+
         {isMenuOpen && (
           <div className="hambergerBlock open">
-            <div className="hambergerMenu">
-              <p>OUR WATER</p>
-              <p>OUR STORY</p>
-              <p>SHOP</p>
-              <p>MY ACCOUNT</p>
-              <p>CART</p>
-            </div>
+            <ul className="hambergerMenu">
+              <li className="menuItem"><a href="#">OUR WATER</a></li>
+              <li className="menuItem"><a href="#">OUR STORY</a></li>
+              <li className="menuItem"><a href="#">SHOP</a></li>
+              <li className="menuItem"><a href="#">MY ACCOUNT</a></li>
+              <li className="menuItem"><a href="#">CART</a></li>
+            </ul>
           </div>
         )}
+
         <div className="navContainer">
+
           <div className="left">
-            <span className="leftGnb">OUR WATER</span>
-            <span className="leftGnb">OUR STORY</span>
-            <span className="leftGnb">SHOP</span>
-            <div className={`leftHamberger ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
+            <ul className="leftGnbList">
+              <li className="leftGnb"><a href="#">OUR WATER</a></li>
+              <li className="leftGnb"><a href="#">OUR STORY</a></li>
+              <li className="leftGnb"><a href="#">SHOP</a></li>
+            </ul>
+            <button
+              className={`leftHamberger ${isMenuOpen ? 'open' : ''}`}
+              onClick={handleMenuToggle}
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle menu"
+            >
               <span className="closed"></span>
               <span className="closed"></span>
               <span className="closed"></span>
-            </div>
+            </button>
           </div>
+          
           <div className="center">
             <div className="logo">
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Evian Logo" />
             </div>
           </div>
+
           <div className="right">
-            <span><LocalMallIcon className="navIcon" /></span>
-            <span className="notiIcon"><NotificationsIcon className="navIcon" /></span>
-            <span><PersonIcon className="navIcon" /></span>
+            <button className="rightIcon" aria-label="Cart"><LocalMallIcon className="navIcon" /></button>
+            <button className="rightIcon notiIcon" aria-label="Notifications"><NotificationsIcon className="navIcon" /></button>
+            <button  className="rightIcon" aria-label="My Account"><PersonIcon className="navIcon" /></button>
           </div>
-        </div>
-      </div>
+
+        </div> {/* navContainer */}
+
+      </div> {/* nav */}
     </>
   );
 };

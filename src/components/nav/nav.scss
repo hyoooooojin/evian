@@ -27,8 +27,8 @@
     justify-content: space-between;
     color: #fff;
     
-    @media screen and (max-width: 1280px) {
-      width: 90%;
+    @media screen and (max-width: 980px) {
+      width: 85%;
     }
     
     .left {
@@ -37,6 +37,11 @@
       gap: 10px;
       font-size: 14px;
       font-weight: 700;
+
+      .leftGnbList{
+        display: flex;
+        gap: 12px;
+      }
       
       .leftGnb {
         border: 1.4px solid #fff;
@@ -47,29 +52,40 @@
         justify-content: center;
         cursor: pointer;
         
-        &:hover {
+        > a {
+          text-decoration: none;
+          color: white;
+        }
+
+         &:hover {
           background-color: #fff;
-          color: #767676;
           text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          color: #767676;
+        }
+
+        &:hover a {
+          color: #767676;
         }
         
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 980px) {
           display: none;
         }
       }
       
       .leftHamberger {
-        width: 36px;
-        max-width: 36px;
-        height: 36px;
+        width: 30px;
+        max-width: 30px;
+        height: 30px;
         position: relative;
         display: none;
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
         z-index: 20; /* 햄버거 메뉴의 z-index 증가 */
+        background-color: transparent;
+        border: transparent;
         
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 980px) {
           display: flex;
         }
         
@@ -78,14 +94,14 @@
           height: 4px;
           position: absolute;
           background-color: #fff;
-          transition: all 0.3s ease-in-out; /* 애니메이션 속도 약간 늘림 */
+          transition: all 0.2s ease-in-out; /* 애니메이션 속도 */
           
           &:nth-child(1) {
-            transform: translateY(-12px);
+            transform: translateY(-10px);
           }
           
           &:nth-child(3) {
-            transform: translateY(12px);
+            transform: translateY(10px);
           }
         }
         
@@ -120,10 +136,17 @@
       flex: 1;
       justify-content: flex-end;
       gap: 12px;
-      
-      .navIcon {
-        cursor: pointer;
-        font-size: 22px;
+
+      .rightIcon {
+        background-color: transparent;
+        border: none;
+
+        .navIcon {
+          cursor: pointer;
+          font-size: 22px;
+          color: white;
+        }
+
       }
       
       .notiIcon {
@@ -169,13 +192,19 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    list-style: none;
     
-    > p {
+    > .menuItem {
       color: #fff;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
       text-align: center;
       font-weight: 700;
       cursor: pointer;
+
+      > a {
+        text-decoration: none;
+        color: white;
+      }
       
       &:hover {
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);

@@ -32,7 +32,7 @@ const Instagram = () => {
   return (
     <div className="instagram">
       <div className="instagramContainer">
-        <h1 className="instagramTitle">INSTAGRAM</h1>
+        <h1 className="instagramTitle" id="instagramTitle">INSTAGRAM</h1>
         <div className="instagramSlider">
           <div className="instagramSlideContainer">
             {/* 두 번 반복된 이미지 배열 */}

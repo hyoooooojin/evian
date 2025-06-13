@@ -39,7 +39,7 @@ const Products = () => {
           </div>
 
           <div className="productRight">
-            <p className="productTitle">Natural mineral water</p>
+            <p className="productTitle" id="productTitle">Natural mineral water</p>
             <p className="productDesc">No matter where life takes you, we believe that bottled natural mineral water should be a convenient and essential part of every day. Our natural mineral water is offered in a wide range of convenient plastic water bottles to help you hydrate throughout the day, whether you’re in the office, at the gym, on the go, or entertaining at home. Evian water bottles come in a variety of sizes. They also come in singles or multipacks</p>
 
             <div className="sliderContainer">
@@ -78,7 +78,7 @@ const Products = () => {
           </div>
 
           <div className="productRight">
-            <p className="productTitle">Natural mineral water in a glass bottle</p>
+            <p className="productTitle" id="productTitle2">Natural mineral water in a glass bottle</p>
             <p className="productDesc">Elevate any occasion with our iconic evian glass water bottles. Add an elegant touch with evian natural mineral water in glass bottles, whether you’re dining at home or at a restaurant, bar, or hotel. All evian glass bottles are recyclable</p>
 
             <div className="sliderContainer">
@@ -116,7 +116,7 @@ const Products = () => {
           </div>
 
           <div className="productRight">
-            <p className="productTitle">Sparkling water</p>
+            <p className="productTitle" id="productTitle3">Sparkling water</p>
             <p className="productDesc">We've added sparkles. Experience the freshness and taste of evian natural spring water, available with light, fine sparkles. Enjoy the refreshing sparkling sensation of evian Sparkling™ carbonated natural spring water and let it awaken your senses.</p>
 
             <div className="sliderContainer">

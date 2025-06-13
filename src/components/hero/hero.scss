@@ -11,6 +11,10 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
+
+    @media screen and (max-width: 980px) {
+      width: 85%;
+    }
 }
 
 .heroContent {
@@ -29,6 +33,10 @@
     width: 40%;
     margin-bottom: 32px;
     font-size: 18px;
+
+    @media screen and (max-width: 980px) {
+      width: 70%;
+    }
 }
 
 .shopButton {
@@ -39,6 +47,8 @@
     font-size: 14px;
     padding: 6px 16px;
     border: 1px solid white;
+    background-color: transparent;
+    color: white;
 }
 
 .shopButton:hover {

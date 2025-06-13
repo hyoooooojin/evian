@@ -10,13 +10,15 @@ import Footer from './components/footer/Footer'
 function App() {
   return (
     <>
-      <Nav/>
-      <Hero/>
-      <SubstanceActions/>
-      <Video/>
-      <Products/>
-      <Instagram/>
-      <Footer/>
+      <nav aria-label="navigation"><Nav/></nav>
+      <main>
+        <section aria-labelledby="heroTitle"><Hero/></section>
+        <section aria-labelledby="substanceActionsTitle"><SubstanceActions/></section>
+        <section aria-label="video"><Video/></section>
+        <section aria-labelledby="productTitle1 productTitle2 productTitle3"><Products/></section>
+        <section aria-labelledby="instagramTitle"><Instagram/></section>
+      </main>
+      <footer aria-label="footer"><Footer/></footer>
     </>
   )
 }
